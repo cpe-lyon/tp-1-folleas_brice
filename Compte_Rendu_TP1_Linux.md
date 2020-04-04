@@ -1,3 +1,4 @@
+### CPE Lyon - 3 IRC - FOLLÉAS Brice
 
 # Compte Rendu TP1 - Admin Linux
 
@@ -7,26 +8,72 @@ Installation de la VM
 
 ## Exercice 2 - Prise en main de l'interpreteur de commande
 ### Manuel 
-1. D'après le manuel, la commande `which` permet de localiser une commande.
-2. On peut utiliser la command `/pattern` en remplaçant 'patern' avec le terme souhaité pour avoir la n ième itération du terme en question.
-3. Pour quitter le manuel, on utilise la commande `q`
-4. La section 'MISCELLANEOUS COMMANDS' présente une liste de commandes divers qui peuvent être utiles. On peut prendre l'exemple de `whoami` qui permet d'afficher sur la console le nom de l'utilisateur courant.  
+ 
+ 1. A l’aide du manuel, identifiez le rôle de la commande which
+
+D'après le manuel, la commande `which` permet de localiser une commande.
+
+2. Quand on consulte une page du manuel, comment peut-on rechercher un terme (par exemple, chercher le terme option dans la page de manuel de which ?
+
+On peut utiliser la command `/pattern` en remplaçant 'patern' avec le terme souhaité pour avoir la n ième itération du terme en question.
+
+3. Comment quitte-t-on le manuel ?
+
+Pour quitter le manuel, on utilise la commande `q`
+
+4. Chaque section du manuel a une première page, qui présente le contenu de la section. Afficher la première page de la section 6 ; de quoi parle cette section ?
+
+La section 'MISCELLANEOUS COMMANDS' présente une liste de commandes divers qui peuvent être utiles. On peut prendre l'exemple de `whoami` qui permet d'afficher sur la console le nom de l'utilisateur courant.  
 
 ### Navigation dans l'arborescence des fichiers
-1. `cd /var/log`
-2. `cd ..`
-3. `cd ~`
-4. `cd -`
-5. `cd /root`
-' Permission non accordée'
-6. `sudo cd /root` permet de lancer la commande en tant qu'administrateur et donc d'avoir les droits relatifs à l'éxécution de la commande. Pour cela, je dois rentrer mon mot de passe utilisateur.
-7. On utilise les commandes `mkdir`pour créer un répertoire et `touch` pour créer un fichier vide (et intialement de modifier le timestamp de dernier accès et de dernière modification de ce fichier, si ce dernier existe).
-8. La commande `rm Dossier1/Fichier1` n'est pas valide car `rm`est une commande qui permet de supprimer un fihcier et non un dossier.
-9. Pour cela on utilise la commande `rmdir` ou `rm -d`
-10. La commande ne peut pas être effectuée sur Dossier2 car ce dernier n'est pas vide.
-11. Pour cela il faut utiliser la commande `rm -r`. L'option `-r` ici utilisée permet de faire un 'remove' récursif et donc de suprimé les fichiers du dossier parent.
+1. allez dans le dossier /var/log
+
+`cd /var/log`
+
+2. remontez dans le dossier parent (/var) en utilisant un chemin relatif
+
+`cd ..`
+
+3. retournez dans le dossier personnel
+
+`cd ~`
+
+4. revenez au dossier précédent (/var) sans utiliser de chemin
+
+`cd -`
+
+5. essayez d’accéder au dossier /root ; que se passe-t-il ?
+
+`cd /root`
+
+6. essayez la commande sudo cd /root ; que se passe-t-il ?
+
+' Permission non accordée' 
+
+`sudo cd /root` permet de lancer la commande en tant qu'administrateur et donc d'avoir les droits relatifs à l'éxécution de la commande. Pour cela, je dois rentrer mon mot de passe utilisateur.
+
+7. à partir de votre dossier personnel, créez l’arborescence suivante :
+
+On utilise les commandes `mkdir`pour créer un répertoire et `touch` pour créer un fichier vide (et intialement de modifier le timestamp de dernier accès et de dernière modification de ce fichier, si ce dernier existe).
+
+8. revenez dans votre dossier personnel ; à l’aide de la commande rm, essayez de supprimer Fichier1, puis Dossier1 ; que se passe-t-il ?
+
+La commande `rm Dossier1/Fichier1` n'est pas valide car `rm`est une commande qui permet de supprimer un fihcier et non un dossier.
+
+9. quelle commande permet de supprimer un dossier ?
+
+Pour cela on utilise la commande `rmdir` ou `rm -d`
+
+10. que se passe-t-il quand on applique cette commande à Dossier2 ?
+
+La commande ne peut pas être effectuée sur Dossier2 car ce dernier n'est pas vide.
+
+11. comment supprimer en une seule commande Dossier2 et son contenu ?
+
+Pour cela il faut utiliser la commande `rm -r`. L'option `-r` ici utilisée permet de faire un 'remove' récursif et donc de suprimé les fichiers du dossier parent.
 
 ### Commandes importantes
+
 1. En utilisant la commande `date` on peut afficher l'heure ainsi que la date système.
 2. La commande `ls -la` permet d'afficher le contenu d'un dossier, l'option `-a` permet d'afficher également les fichiers cachés et l'option `-l` permet elle, d'afficher plus de détails relatifs au fichiers (permissions d'accès, le nombre de liens physiques, le nom du propriétaire et du groupe,etc...).
 3. La commande `ls` étant une commande de base linux, elle se trouve dans le répertoire /bin.
@@ -62,7 +109,6 @@ On peut voir que le contenu de titi a changé
 On peut voir que le contenu de tutu a changé
 `rm titi`
 Si titi est supprimé il est impossible de lire le contenu de tutu
-
 
 13. Pour afficher le contenu de /var/log/syslog il suffit d'utiliser la commande `cat /var/log/syslog`, pour interrompre le processus il faut utiliser `Ctrl + c`
 14.  Pour afficher les 5 premières
@@ -109,7 +155,6 @@ Coller avec `Ctrl + u` pour coller.
 
 ## Exercice 4 - Personnalisation du shell
 
-
 1. Création de la copie du fichier `~/bashrc` : 
 `cp ~/.bashrc ./bashrc_bak`
 
@@ -123,3 +168,5 @@ La ligne `force_color_prompt=yes` une fois décommenté dans le fichier `~/.bash
 `\[\e[35\][\A] - \[\e[32\]\u@\h:\[\e[36m\]\w\[\033[00m\]`
 
 ## Exercice 5 - Pour les plus rapides
+
+> Work in progress...
